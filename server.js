@@ -487,11 +487,11 @@ const server = http.createServer(async (req, res) => {
   });
 });
 
-server.listen(PORT, () => {
-  console.log(`=======================================================`);
-  console.log(`⚡ UniSchedule Hybrid Web Server Running!`);
-  console.log(`🔗 Local URL:  http://localhost:${PORT}`);
-  console.log(`💾 Database:   ${DB_PATH} (SQLite 3 via node:sqlite)`);
-  console.log(`🚀 Mode:       Hybrid (REST API + SQLite + Offline-Capable)`);
-  console.log(`=======================================================`);
+server.listen(PORT, "0.0.0.0", () => {
+    console.log("==========================================");
+    console.log("UniSchedule Server Running!");
+    console.log(`Local URL: http://localhost:${PORT}`);
+    console.log(`Network Port: ${PORT}`);
+    console.log(`Database: ${DB_PATH}`);
+    console.log("==========================================");
 });
